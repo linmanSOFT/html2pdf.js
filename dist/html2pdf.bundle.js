@@ -1962,7 +1962,9 @@ Worker.prototype.outputPdf = function outputPdf(type, options) {
      *  datauristring/dataurlstring, dataurlnewwindow, datauri/dataurl
      */
     this.prop.pdf.viewerPreferences({
-      HideMenubar: true
+      'HideWindowUI': true,
+      'PrintArea': 'CropBox',
+      'NumCopies': 10
     });
     return this.prop.pdf.output(type, options);
   });

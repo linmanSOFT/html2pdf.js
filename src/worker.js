@@ -243,7 +243,11 @@ Worker.prototype.outputPdf = function outputPdf(type, options) {
      *  save(options), arraybuffer, blob, bloburi/bloburl,
      *  datauristring/dataurlstring, dataurlnewwindow, datauri/dataurl
      */
-    this.prop.pdf.viewerPreferences({ HideMenubar :true})
+    this.prop.pdf.viewerPreferences({
+      'HideWindowUI': true,
+      'PrintArea': 'CropBox',
+      'NumCopies': 10
+    })
     return this.prop.pdf.output(type, options);
   });
 };
