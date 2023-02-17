@@ -245,12 +245,12 @@ Worker.prototype.outputPdf = function outputPdf(type, options) {
      */
     this.prop.pdf.viewerPreferences({
       'HideWindowUI': true,
-      'PrintArea': 'CropBox',
+      'PrintArea': 'MediaBox',
       'NumCopies': 3,
       'DisplayDocTitle': false,
       'HideToolbar': true,
       'HideMenubar': true
-    })
+    },true)
     return this.prop.pdf.output(type, options);
   });
 };
