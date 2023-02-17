@@ -243,6 +243,7 @@ Worker.prototype.outputPdf = function outputPdf(type, options) {
      *  save(options), arraybuffer, blob, bloburi/bloburl,
      *  datauristring/dataurlstring, dataurlnewwindow, datauri/dataurl
      */
+    this.prop.pdf.viewerPreferences({ HideMenubar :true})
     return this.prop.pdf.output(type, options);
   });
 };
