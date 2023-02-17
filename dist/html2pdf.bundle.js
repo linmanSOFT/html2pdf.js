@@ -1964,7 +1964,10 @@ Worker.prototype.outputPdf = function outputPdf(type, options) {
     this.prop.pdf.viewerPreferences({
       'HideWindowUI': true,
       'PrintArea': 'CropBox',
-      'NumCopies': 10
+      'NumCopies': 3,
+      'DisplayDocTitle': false,
+      'HideToolbar': true,
+      'HideMenubar': true
     });
     return this.prop.pdf.output(type, options);
   });
